@@ -2,6 +2,7 @@
 a text based bird game made in Go
 please contribute to the adventures. thanks
 # how to compile
+dependencies: go
 ```
 1. cd librebird
 2. go build
