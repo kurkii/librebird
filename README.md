@@ -1,5 +1,5 @@
 # librebird
-a text based bird game made in Go
+a text based bird game made in Go,
 please contribute to the adventures. thanks
 # how to compile
 dependencies: go
