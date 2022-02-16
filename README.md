@@ -7,8 +7,8 @@ a text based bird game made in Go
 2. go build
 3. cp librebird /usr/local/bin or ./librebird
 4. librebird
+5. enjoy
 ```
-enjoy
 
 # how to run binary
 1. download binary
