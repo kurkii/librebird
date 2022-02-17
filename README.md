@@ -1,7 +1,6 @@
 # librebird
 a text based bird game
-# contribute
-please contribute to the adventures. thanks
+
 # how to compile
 dependencies: go
 ```
@@ -16,3 +15,7 @@ dependencies: go
 1. download binary
 2. `./librebird`
 3. enjoy
+
+# contribute
+
+please contribute to the adventures. thanks
