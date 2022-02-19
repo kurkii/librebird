@@ -1,5 +1,5 @@
 # librebird
-a text based bird game, probably only works on unix-like operating systems
+a text based bird game
 
 # how to compile
 dependencies: go
