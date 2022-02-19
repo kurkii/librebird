@@ -10,6 +10,7 @@ import (
 func main() {
 
 	rand.Seed(time.Now().UnixNano())  // seeds for a random number
+	var usedAdventures [5]int         // int array which is checked to prevent duplicate adventures
 	var chances = 1 + rand.Intn(50-1) // random number from 1-50, used for roulette
 	var void string                   // basically /dev/null
 	var birdName string               // the name you set for your birdie
@@ -17,6 +18,7 @@ func main() {
 	var birdHealth int = 100          // bird health
 	var birdKarma int = 100           // bird karma
 	var birdArtifacts int             // bird artifacts
+	var used string = "This adventure has already been used, reroll!"
 
 	fmt.Println("Welcome to Librebird.")
 	fmt.Println("This amazing piece of software has been Created by the almighty Coolbird.")
@@ -205,6 +207,13 @@ func main() {
 
 			switch rand {
 			case 1:
+
+				if usedAdventures[1] == 1 {
+
+					fmt.Println(used)
+					break
+				}
+
 				fmt.Println("You have found a ball of seeds. Would you indulge in eating these seeds? (y/n)")
 				fmt.Scanln(&decision)
 
@@ -221,7 +230,15 @@ func main() {
 				default:
 					fmt.Println("Idiot. That is not a valid option.")
 				}
+				usedAdventures[1] = 1
 			case 2:
+
+				if usedAdventures[2] == 1 {
+
+					fmt.Println(used)
+					break
+				}
+
 				fmt.Println("You decided you want to go to Africa.")
 				fmt.Println("You dont know what to bring with you, a chess board, a fish or seeds")
 				fmt.Println("(chess/fish/seeds)")
@@ -352,8 +369,15 @@ func main() {
 					fmt.Println("Idiot!! Wrong option this is not correct!")
 
 				}
-
+				usedAdventures[2] = 1
 			case 3:
+
+				if usedAdventures[3] == 1 {
+
+					fmt.Println(used)
+					break
+				}
+
 				fmt.Println("You have flown to New York.")
 				fmt.Println("The gas emissions are killing you.")
 				fmt.Println("Do you attempt to escape or go in the sewers? (escape/sewers)")
@@ -440,7 +464,15 @@ func main() {
 				default:
 					fmt.Println("Can you read? do you see the valid options, mister or madam or maam?")
 				}
+				usedAdventures[3] = 1
 			case 4:
+
+				if usedAdventures[4] == 1 {
+
+					fmt.Println(used)
+					break
+				}
+
 				fmt.Println("You decide to play chess with Grandmaster Hikaru Nakamura")
 				fmt.Println("He is about to checkmate you, what will you do?")
 				fmt.Println("Move your pawn or move your queen (pawn/queen)")
@@ -478,7 +510,7 @@ func main() {
 					birdHealth = 0
 
 				}
-
+				usedAdventures[4] = 1
 			}
 
 		default:
